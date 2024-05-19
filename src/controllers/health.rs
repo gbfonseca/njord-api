@@ -9,7 +9,7 @@ async fn health() -> impl Responder {
         status: 200,
     };
 
-    HttpResponse::Ok().body(serde_json::to_string(&response).unwrap())
+    HttpResponse::Ok().json(response)
 }
 
 #[cfg(test)]
